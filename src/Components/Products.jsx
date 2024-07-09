@@ -19,7 +19,7 @@ const Products = () => {
                 <li className={`${select === 2 ? 'bg-[#9B045B] bg-opacity-20 ' : '' } cursor-pointer px-3 py-[2px] rounded-md transition-all duration-200  `} onClick={() => selectCategory(2)}>Cosmetics & Beauty</li>
             </ul>
         </section>
-        <section className=' mt-7 grid grid-cols-4 place-items-center gap-6'>
+        <section className=' mt-7 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-6'>
             {
                 images.map((image,index) => (
                     <div key={index} className=' mt-5 border-solid border-2 rounded-lg border-[#414042] border-opacity-40 px-5 pb-7 pt-5'>

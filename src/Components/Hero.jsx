@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <div className=" mt-6 relative">
+    <div className=" mt-6 relative h-[340px]">
       <div className=" flex justify-center gap-3 mt-3 absolute bottom-16 left-20">
         <div
           className={`${slider === 0 ? 'bg-white' : 'bg-transparent'} outline-1 outline outline-white w-3 h-3  rounded-full cursor-pointer`}
@@ -34,7 +34,7 @@ const Hero = () => {
           onClick={() => selectSlide(2)}
         ></div>
       </div>
-      <div className=" bg-[#9B045B] w-fit px-6 py-5 rounded-tl-[40px] rounded-br-[40px] absolute right-20 bottom-16 ">
+      <div className=" bg-[#9B045B] w-fit px-6 py-5 rounded-tl-[40px] rounded-br-[40px] absolute right-20 bottom-16 hidden xl:block">
         <h1 className=" text-[30px] text-wrap w-[300px] text-white font-bold">Your Home of Affordable Groceries</h1>
         <button className=" px-3 bg-white text-black py-1 rounded-full font-medium text-sm mt-1">Shop Now</button>
       </div>

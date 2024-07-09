@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className=' max-w-[1440px] m-auto mt-48'>
-        <section className=' m-auto w-[85%] flex items-center justify-between py-8'>
+        <section className=' m-auto w-[85%] flex items-center justify-between py-8 md:flex-row flex-col'>
             <div>
             <h3>Subscribe to our newsletter</h3>
             <p>Subscribe to our newsletter & be the first to know about our new arrivals and discounts.</p>
