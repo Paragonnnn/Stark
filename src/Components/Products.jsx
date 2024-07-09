@@ -22,7 +22,7 @@ const Products = () => {
         <section className=' mt-7 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-6'>
             {
                 images.map((image,index) => (
-                    <div key={index} className=' mt-5 border-solid border-2 rounded-lg border-[#414042] border-opacity-40 px-5 pb-7 pt-5'>
+                    <div key={index} className=' mt-5 border-solid border-2 rounded-lg border-[#414042] border-opacity-40 px-5 pb-7 pt-5 h-[415px]'>
                         <img src={image.image} alt="" className=''/>
                         <div className=' text-2xl font-normal mt-4 mb-2'>{image.name}</div>
                         <div className=' font-bold text-3xl mb-2'>${image.price}.00</div>
