@@ -3,7 +3,7 @@ import Arrow from "../assets/SVG/Arrow";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className=" md:block hidden">
       <div className=" w-full bg-[#414042] h-[1px] opacity-50"></div>
       <nav className="flex justify-between items-center mt-10 px-4 gap-5">
         <div className=" bg-[#9B045B] w-fit px-3 rounded-lg py-2 flex items-center gap-5 text-white">
