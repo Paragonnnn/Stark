@@ -6,7 +6,7 @@ import Products from "./Components/Products";
 import Footer from "./Components/Footer";
 import { Route, Routes } from "react-router-dom";
 import CheckOut from "./Components/CheckOut";
-import Cart from "./Components/Cart";
+import CartPage from "./Components/CartPage";
 import Product from "./Components/Product";
 
 function App() {
@@ -17,10 +17,17 @@ function App() {
       <header className=" mb-7 h-[30px] w-full bg-[#9B045B] lg:block hidden"></header>
 
       <Routes>
-        <Route path="/" element={<HomePage cart={cart} setCart={setCart}/>} setProduct={setProduct}/>
+        <Route
+          path="/"
+          element={<HomePage cart={cart} setCart={setCart} />}
+          setProduct={setProduct}
+        />
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/product/:id" element={<Product cart={cart} setCart={setCart} product={product}/>} />
+        <Route path="/cart" element={<CartPage cart={cart} />} />
+        <Route
+          path="/product/:id"
+          element={<Product cart={cart} setCart={setCart} product={product} />}
+        />
       </Routes>
       <div className=" bg-[#6F0241]">
         <Footer />

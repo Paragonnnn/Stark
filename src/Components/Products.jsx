@@ -14,8 +14,9 @@ import Cart from "../assets/SVG/Cart";
 import Receipt from "../assets/SVG/Receipt";
 import User from "../assets/SVG/User";
 import { Link } from "react-router-dom";
+import CartPage from "./CartPage";
 
-const Products = ({cart, setCart,setProduct}) => {
+const Products = ({ cart, setCart, setProduct }) => {
   const [select, setSelect] = useState(0);
   const categories = [
     "Phones and Tablets",
@@ -33,7 +34,7 @@ const Products = ({cart, setCart,setProduct}) => {
     setCart([...cart, product]);
     alert(`${product.name} added to cart`);
     console.log(cart);
-  }
+  };
 
   return (
     <div className=" mt-12">
@@ -102,13 +103,14 @@ const Products = ({cart, setCart,setProduct}) => {
           </div>
         </div>
       </section>
-      <div className=" font-medium text-lg mt-4 md:hidden block">Special For You</div>
+      <div className=" font-medium text-lg mt-4 md:hidden block">
+        Special For You
+      </div>
       <section className=" lg:mt-7 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-6">
         {images.map((image, index) => (
           <div
             key={index}
             className=" mt-5 border-solid border-2 rounded-lg border-[#414042] border-opacity-40 px-3 md:px-5 pb-2 md:pb-7 pt-3 md:pt-5 relative flex flex-col"
-           
           >
             <div className=" absolute right-[10px] top-[10px] z-10">
               <Like />
@@ -119,34 +121,44 @@ const Products = ({cart, setCart,setProduct}) => {
               className="  w-[150px] lg:w-[230px] hover:scale-[105%] transition-all duration-300 overflow-hidden"
             />
             <div>
-              <Link  to={`/product/${image.id}`} className=" text-sm md:text-2xl font-normal mt-2 md:mt-4 mb-1" onClick={() => setProduct([image])}>
+              <Link
+                to={`/product/${image.id}`}
+                className=" text-sm md:text-2xl font-normal mt-2 md:mt-4 mb-1"
+                onClick={() => setProduct([image])}
+              >
                 {image.name}
               </Link>
               <div className=" font-bold text-lg md:text-3xl mb-2">
                 ${image.price}.00
               </div>
-              <button className=" bg-[#9B045B] text-white w-full py-3 rounded-xl text-sm mb-2 md:text-base mt-1 md:mt-5" onClick={() => addToCart(image)}>
+              <button
+                className=" bg-[#9B045B] text-white w-full py-3 rounded-xl text-sm mb-2 md:text-base mt-1 md:mt-5"
+                onClick={() => addToCart(image)}
+              >
                 Add to cart
               </button>
             </div>
           </div>
         ))}
       </section>
+      <Cart />
       <section className="flex md:hidden fixed left-0 py-4 bottom-0 w-full bg-white justify-around z-50">
-        <div >
+        <div>
           <Home className=" w-7" />
         </div>
-        <div >
+        <div>
           <Menu className=" w-7" />
         </div>
         <div className=" relative">
           <Cart className=" w-7" />
-          <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">{cart.length}</div>
+          <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">
+            {cart.length}
+          </div>
         </div>
-        <div >
+        <div>
           <Receipt className=" w-7" />
         </div>
-        <div >
+        <div>
           <User className=" w-7" />
         </div>
       </section>
