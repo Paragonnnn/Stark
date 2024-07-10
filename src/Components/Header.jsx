@@ -8,12 +8,14 @@ import User from "../assets/SVG/User";
 import QuestionMark from "../assets/SVG/QuestionMark";
 import { Link } from "react-router-dom";
 
-const Header = ({cart}) => {
+const Header = ({ cart }) => {
   return (
     <header className=" flex-col sm:flex-row flex justify-between items-center mb-7 sticky top-0 z-40 bg-white py-4">
       <section className=" w-full lg:flex lg:items-center lg:justify-between">
         <div className=" flex justify-between items-center mb-7 w-full">
-          <img src={Logo} alt="" className=" h-5 lg:h-8" />
+          <Link to={'/'}>
+            <img src={Logo} alt="" className=" h-5 lg:h-8" />
+          </Link>
           <section className="hidden lg:flex bg-[#DDD9D9] p-2 px-3 gap-3 items-center rounded-full lg:w-[633px] w-full focus:outline-1 focus:outline focus:outline-[#414042]">
             <SearchLogo />
 
@@ -27,18 +29,23 @@ const Header = ({cart}) => {
             <Like2 />
             <Bell />
           </section>
-        <section className=" gap-4 hidden lg:flex">
-          <div>
-            <User className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
-          </div>
-          <Link to={'/cart'} className=" relative">
-            <Cart className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" link="/cart"/>
-            <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">{cart.length}</div>
-          </Link>
-          <div>
-            <QuestionMark className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
-          </div>
-        </section>
+          <section className=" gap-4 hidden lg:flex">
+            <div>
+              <User className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
+            </div>
+            <Link to={"/cart"} className=" relative">
+              <Cart
+                className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer"
+                link="/cart"
+              />
+              <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">
+                {cart.length}
+              </div>
+            </Link>
+            <div>
+              <QuestionMark className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
+            </div>
+          </section>
         </div>
         <section className="lg:hidden flex bg-[#DDD9D9] p-2 px-3 gap-3 items-center rounded-full lg:w-[633px] w-full focus:outline-1 focus:outline focus:outline-[#414042]">
           <SearchLogo />

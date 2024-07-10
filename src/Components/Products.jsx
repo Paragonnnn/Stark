@@ -141,7 +141,7 @@ const Products = ({ cart, setCart, setProduct }) => {
           </div>
         ))}
       </section>
-      <Cart />
+      {/* <CartPage cart={cart}/> */}
       <section className="flex md:hidden fixed left-0 py-4 bottom-0 w-full bg-white justify-around z-50">
         <div>
           <Home className=" w-7" />

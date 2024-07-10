@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import CheckOut from "./Components/CheckOut";
 import CartPage from "./Components/CartPage";
 import Product from "./Components/Product";
+import Footer2 from "./Components/Footer2";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -31,6 +32,9 @@ function App() {
       </Routes>
       <div className=" bg-[#6F0241]">
         <Footer />
+      </div>
+      <div className=" bg-[#1C1C1D] text-white">
+        <Footer2 />
       </div>
     </div>
   );
