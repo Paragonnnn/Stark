@@ -15,6 +15,7 @@ import Receipt from "../assets/SVG/Receipt";
 import User from "../assets/SVG/User";
 import { Link } from "react-router-dom";
 import CartPage from "./CartPage";
+import MobileNav from "./MobileNav";
 
 const Products = ({ cart, setCart, setProduct }) => {
   const [select, setSelect] = useState(0);
@@ -142,26 +143,7 @@ const Products = ({ cart, setCart, setProduct }) => {
         ))}
       </section>
       {/* <CartPage cart={cart}/> */}
-      <section className="flex md:hidden fixed left-0 py-4 bottom-0 w-full bg-white justify-around z-50">
-        <div>
-          <Home className=" w-7" />
-        </div>
-        <div>
-          <Menu className=" w-7" />
-        </div>
-        <div className=" relative">
-          <Cart className=" w-7" />
-          <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">
-            {cart.length}
-          </div>
-        </div>
-        <div>
-          <Receipt className=" w-7" />
-        </div>
-        <div>
-          <User className=" w-7" />
-        </div>
-      </section>
+      <MobileNav cart={cart} />
     </div>
   );
 };

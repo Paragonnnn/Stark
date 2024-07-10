@@ -7,12 +7,14 @@ import Cart from "../assets/SVG/Cart";
 import User from "../assets/SVG/User";
 import QuestionMark from "../assets/SVG/QuestionMark";
 import { Link } from "react-router-dom";
+import Setting from "../assets/SVG/Setting";
+import Line from "../assets/SVG/Line";
 
 const Header = ({ cart }) => {
   return (
-    <header className=" flex-col sm:flex-row flex justify-between items-center mb-7 sticky top-0 z-40 bg-white py-4">
+    <header className=" flex-col sm:flex-row flex justify-between items-center mb-7  top-0 z-40 bg-white py-4">
       <section className=" w-full lg:flex lg:items-center lg:justify-between">
-        <div className=" flex justify-between items-center mb-7 w-full">
+        <div className=" flex justify-between items-center mb-7 w-full sticky">
           <Link to={'/'}>
             <img src={Logo} alt="" className=" h-5 lg:h-8" />
           </Link>
@@ -55,6 +57,8 @@ const Header = ({ cart }) => {
             placeholder="Search"
             className=" bg-[#DDD9D9] placeholder:text-[#414042] w-full outline-none"
           />
+          <Line />
+          <Setting />
         </section>
       </section>
     </header>

@@ -17,7 +17,7 @@ const NavBar = () => {
             <Arrow />
           </div>
         </div>
-        <ul className=" flex md:gap-5 lg:gap-7 text-lg">
+        <ul className=" flex md:gap-5 lg:gap-7 text-sm lg:text-lg">
           <li className=" hover:text-[#9B045B]"><a href="#">Phones and Tablets</a></li>
           <li className=" hover:text-[#9B045B]"><a href="#">Gadget Accessories</a></li>
           <li className=" hover:text-[#9B045B]"><a href="#">Cosmetics & Beauty</a></li>
