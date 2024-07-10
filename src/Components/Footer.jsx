@@ -9,20 +9,20 @@ const Footer = () => {
         <div className="flex items-center text-white gap-5 w-[90%] md:w-[40%]">
           <NewsLetter />
           <div>
-            <h3 className=" font-semibold text-3xl">Subscribe to our newsletter</h3>
+            <h3 className=" font-semibold text-xl lg:text-3xl">Subscribe to our newsletter</h3>
             <p>
               Subscribe to our newsletter & be the first to know about our new
               arrivals and discounts.
             </p>
           </div>
         </div>
-        <form className=" py-2 bg-white px-3 rounded-full w-[95%] md:w-1/2 text-[#414042] flex justify-between">
+        <form className=" py-2 lg:py-2 bg-white px-3 rounded-full w-[95%] md:w-1/2 text-[#414042] flex justify-between">
           <input
             type="email"
             placeholder="Enter your email"
-            className=" bg-white outline-none placeholder:text-[#414042] indent-3"
+            className="  outline-none bg-transparent placeholder:text-[#414042] indent-3"
           />
-          <button className=" text-white bg-[#9B045B] px-3 py-3 rounded-full">
+          <button className=" text-white bg-[#9B045B] p-1 px-2 lg:p-3 rounded-full">
             Subscribe
           </button>
         </form>
