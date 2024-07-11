@@ -23,7 +23,7 @@ function App() {
           element={<HomePage cart={cart} setCart={setCart} />}
           setProduct={setProduct}
         />
-        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout" element={<CheckOut cart={cart}/>} />
         <Route path="/cart" element={<CartPage cart={cart} />} />
         <Route
           path="/product/:id"

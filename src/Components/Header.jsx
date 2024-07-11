@@ -18,13 +18,13 @@ const Header = ({ cart }) => {
           <Link to={'/'}>
             <img src={Logo} alt="" className=" h-5 lg:h-8" />
           </Link>
-          <section className="hidden lg:flex bg-[#DDD9D9] p-2 px-3 gap-3 items-center rounded-full lg:w-[633px] w-full focus:outline-1 focus:outline focus:outline-[#414042]">
+          <section className="hidden lg:flex bg-[#DDD9D960] p-2 px-3 gap-3 items-center rounded-full lg:w-[633px] w-full focus:outline-1 focus:outline focus:outline-[#414042]">
             <SearchLogo />
 
             <input
               type="text"
               placeholder="Search"
-              className=" bg-[#DDD9D9] placeholder:text-[#414042] w-full outline-none"
+              className=" bg-transparent placeholder:text-[#414042] w-full outline-none"
             />
           </section>
           <section className="flex lg:hidden gap-2">
@@ -33,11 +33,11 @@ const Header = ({ cart }) => {
           </section>
           <section className=" gap-4 hidden lg:flex">
             <div>
-              <User className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
+              <User className=" h-8 p-[6px] bg-[#DDD9D960] rounded-full cursor-pointer" />
             </div>
             <Link to={"/cart"} className=" relative">
               <Cart
-                className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer"
+                className=" h-8 p-[6px] bg-[#DDD9D960] rounded-full cursor-pointer"
                 link="/cart"
               />
               <div className=" absolute -top-[8px] text-xs -right-1 h-[18px] w-[18px] flex justify-center items-center rounded-full bg-[#9B045B] text-white">
@@ -45,7 +45,7 @@ const Header = ({ cart }) => {
               </div>
             </Link>
             <div>
-              <QuestionMark className=" h-8 p-[6px] bg-[#DDD9D9] rounded-full cursor-pointer" />
+              <QuestionMark className=" h-8 p-[6px] bg-[#DDD9D960] rounded-full cursor-pointer" />
             </div>
           </section>
         </div>
@@ -55,7 +55,7 @@ const Header = ({ cart }) => {
           <input
             type="text"
             placeholder="Search"
-            className=" bg-[#DDD9D9] placeholder:text-[#414042] w-full outline-none"
+            className=" bg-transparent placeholder:text-[#414042] w-full outline-none"
           />
           <Line />
           <Setting />

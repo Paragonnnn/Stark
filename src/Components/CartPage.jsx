@@ -4,6 +4,7 @@ import Header from "./Header";
 import Trash from "../assets/SVG/Trash";
 import Tag from "../assets/SVG/Tag";
 import MobileNav from "./MobileNav";
+import { Link } from "react-router-dom";
 
 const CartPage = ({ cart }) => {
   return (
@@ -68,9 +69,9 @@ const CartPage = ({ cart }) => {
               <div>Subtotal:</div>
               <div>Total:</div>
             </div>
-            <button className=" bg-[#44C368] w-full text-white py-2 rounded-xl mt-40 ">
+            <Link to={'/checkout'} className=" bg-[#44C368] w-full text-white py-2 rounded-xl mt-40 flex justify-center">
               Proceed to checkout
-            </button>
+            </Link>
           </section>
         </section>
         <section>
@@ -128,7 +129,7 @@ const CartPage = ({ cart }) => {
                     <div className=" font-semibold text-lg">Total: </div>
                     <div className=" font-semibold text-lg">$200.00</div>
                   </div>
-                  <button className=" bg-[#9B045B] w-full text-white py-3 mt-5 rounded-full">Check Out</button>
+                  <Link to={`/checkout`} className=" bg-[#9B045B] w-full text-white py-3 mt-5 rounded-full flex justify-center">Check Out</Link>
               </div>
             </div>
           </div>
