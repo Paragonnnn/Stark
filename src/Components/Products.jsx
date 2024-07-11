@@ -30,7 +30,7 @@ const Products = ({ cart, setCart, setProduct }) => {
 
   const addToCart = (product) => {
     if (cart.find((item) => item.id === product.id)) {
-      alert("Product already in cart");
+      alert(`${product.name} already in cart`);
       return;
     }
     setCart([...cart, product]);
