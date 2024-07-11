@@ -50,7 +50,7 @@ const CheckOut = ({ cart }) => {
                 className=" outline-none border border-solid border-[#41404250] rounded indent-3 py-2 text-sm mb-4 focus:bg-[#DDD9D960] transition-colors duration-200"
               />
             </div>
-            <div className="flex w-full gap-8">
+            <div className="flex w-full gap-8 items-end">
               <div className="flex flex-col flex-1">
                 <label className=" text-sm mb-2 font-semibold" htmlFor="">
                   Phone number
